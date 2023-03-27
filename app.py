@@ -10,7 +10,7 @@ GUILD = os.getenv('DISCORD_GUILD')
 OWNER = os.getenv('DISCORD_OWNER')
 PREFIX = os.getenv('DISCORD_PREFIX')
 
-client = discord.Client(guild_subscriptions=True)
+client = discord.Client(guild_subscriptions=True, intents=discord.Intents.default())
 
 
 @client.event
