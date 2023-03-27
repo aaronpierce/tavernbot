@@ -1,0 +1,6 @@
+verion: "3"
+services:
+  app:
+    build: .
+    image: tavern-bot
+    restart: unless-stopped
