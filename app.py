@@ -12,6 +12,12 @@ OWNER = os.getenv('DISCORD_OWNER')
 PREFIX = os.getenv('DISCORD_PREFIX')
 
 intents = discord.Intents.all()
+intents.members = True
+intents.presences = True
+intents.messages = True
+intents.typing = True
+intents.guilds = True
+
 
 bot = Bot(command_prefix=PREFIX, intents=intents)
 
@@ -19,7 +25,7 @@ bot = Bot(command_prefix=PREFIX, intents=intents)
 async def on_ready():
     print('Tavern Bot Connected.')
 
-@bot.command():
+@bot.command()
 async def hello(ctx):
         await ctx.channel.send(f'hello there {ctx.author.mention}')
 
