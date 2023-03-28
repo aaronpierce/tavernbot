@@ -5,6 +5,6 @@ def is_linux():
 
 def dotenv_path():
 	if is_linux():
-		return '\\root\\docker-pyhton\\tavernbot\\.env'
+		return b'\\root\\docker-pyhton\\tavernbot\\.env'
 	else:
 		return '.env'
