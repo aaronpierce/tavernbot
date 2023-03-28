@@ -1,7 +1,8 @@
 version: '3.8'
 
 services:
-  app:
+  main:
     build: .
     image: tavern-bot
     restart: unless-stopped
+    network_mode: bridge
