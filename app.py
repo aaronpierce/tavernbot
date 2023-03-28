@@ -1,19 +1,14 @@
 
-import os
-import random
-from dotenv import load_dotenv
-
 import discord
 from discord.ext.commands import Bot
 
-from utils import dotenv_path
+from dotenv import dotenv_values
 
-
-load_dotenv(dotenv_path())
-TOKEN = os.getenv('DISCORD_TOKEN')
-GUILD = os.getenv('DISCORD_GUILD')
-OWNER = os.getenv('DISCORD_OWNER')
-PREFIX = os.getenv('DISCORD_PREFIX')
+load_dotenv('.env')
+TOKEN = dotenv_values('DISCORD_TOKEN')
+GUILD = dotenv_values('DISCORD_GUILD')
+OWNER = dotenv_values('DISCORD_OWNER')
+PREFIX = dotenv_values('DISCORD_PREFIX')
 
 intents = discord.Intents.all()
 intents.members = True
