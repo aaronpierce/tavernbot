@@ -4,11 +4,12 @@ from discord.ext.commands import Bot
 
 from dotenv import dotenv_values
 
-load_dotenv('.env')
-TOKEN = dotenv_values('DISCORD_TOKEN')
-GUILD = dotenv_values('DISCORD_GUILD')
-OWNER = dotenv_values('DISCORD_OWNER')
-PREFIX = dotenv_values('DISCORD_PREFIX')
+config = dotenv_values('.env')
+
+TOKEN = config['DISCORD_TOKEN']
+GUILD = config['DISCORD_GUILD']
+OWNER = config['DISCORD_OWNER']
+PREFIX = config['DISCORD_PREFIX']
 
 intents = discord.Intents.all()
 intents.members = True
