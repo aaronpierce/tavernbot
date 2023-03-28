@@ -1,4 +1,7 @@
 
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
 import discord
 from discord.ext.commands import Bot
 
