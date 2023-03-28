@@ -1,11 +1,15 @@
 
 import os
 import random
-import discord
-from discord.ext.commands import Bot
 from dotenv import load_dotenv
 
-load_dotenv()
+import discord
+from discord.ext.commands import Bot
+
+from utils import dotenv_path
+
+
+load_dotenv(dotenv_path())
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 OWNER = os.getenv('DISCORD_OWNER')
